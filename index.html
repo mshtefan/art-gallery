@@ -1,0 +1,375 @@
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+
+
+<style>
+
+body {
+  height: 15000px;
+  font-family: Roboto
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+    height: 50000px;
+}
+
+#head {
+  font-weight: bold;
+    font-size: 65px;
+    line-height: 82px;
+    text-align: center;
+    position: fixed;
+    top: calc( 17% - 80px );
+    text-align: center;
+    width: 100%;
+    left: 0;
+}
+
+#image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1);
+}
+
+.steps_start {
+  transition: all 1s ease !important;
+  transform: scale(2) !important;
+}
+
+.before_steps {
+  transition: all 0.05s ease;
+}
+
+.step_1 {
+  margin-left: 1000px !important;
+  margin-top: -50px;
+}
+
+.step_2 {
+  margin-left: 850px !important;
+  margin-top: 0px;
+}
+
+
+.step_3 {
+  margin-left: 700px !important;
+  margin-top: 50px;
+}
+
+
+.step_4 {
+  margin-left: 550px !important;
+  margin-top: -50px;
+}
+
+.step_5 {
+  margin-left: 400px !important;
+  margin-top: 0px;
+}
+
+.step_6 {
+  margin-left: 250px !important;
+  margin-top: 50px;
+}
+
+.step_7 {
+  margin-left: 100px !important;
+  margin-top: 0px;
+}
+
+.step_8 {
+  margin-left: -100px !important;
+  margin-top: 0px;
+}
+
+.step_9 {
+  margin-left: -300px !important;
+  margin-top: 50px;
+}
+
+.step_10 {
+  transition: all 2s ease !important;
+  transform: scale(6) !important;
+  margin-left: -160% !important;
+  margin-top: 50px;
+}
+
+.step_11 {
+  transition: all 1s ease !important;
+  transform: scale(1) !important;
+  margin: 0 !important;
+}
+
+#comment {
+  position: fixed;
+  left: 0;
+  top: 60%;
+  height: 40%;
+  width: 100%;
+  background: black;
+  display: flex;
+}
+
+#name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  box-sizing: border-box;
+  width: 30%;
+  max-width: 400px;
+}
+
+#combody {
+  width: 70%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 160%;
+  color: white;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+#overlay {
+  position: fixed;
+  background: black;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top:0;
+  left: 0;
+}
+
+.no-overflow {
+  overflow: hidden;
+}
+
+
+@media (orientation: portrait) {
+  body {
+    opacity: 0;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+    <div id='overlay'></div>
+    <div id='head'>Сегодня особенный день...</div>
+    <img id='image' src='./image.jpg'>
+    <div id='comment'>
+      <div id='name' class='name_1'>
+        <span>2Ваня<br> Буката</span>
+      </div>
+      <div id='combody' class='combody_1'>
+        2Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+      </div>
+
+      <div id='name' class='name_2'>
+        <span>3Ваня<br> Буката</span>
+      </div>
+      <div id='combody' class='combody_2'>
+        3Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+      </div>
+
+      <div id='name' class='name_3'>
+        <span>4Ваня<br> Буката</span>
+      </div>
+      <div id='combody' class='combody_3'>
+        4Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+      </div>
+
+      <div id='name' class='name_4'>
+        <span>5Ваня<br> Буката</span>
+      </div>
+      <div id='combody' class='combody_4'>
+        5Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+      </div>
+
+      <div id='name' class='name_5'>
+        <span>6Ваня<br> Буката</span>
+      </div>
+      <div id='combody' class='combody_5'>
+        6Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+      </div>
+
+      <div id='name' class='name_6'>
+        <span>7Ваня<br> Буката</span>
+      </div>
+      <div id='combody' class='combody_6'>
+        7Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+      </div>
+
+      <div id='name' class='name_7'>
+        <span>8Ваня<br> Буката</span>
+      </div>
+      <div id='combody' class='combody_7'>
+        8Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+      </div>
+
+      <div id='name' class='name_8'>
+        <span>9Ваня<br> Буката</span>
+      </div>
+      <div id='combody' class='combody_8'>
+        9Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+      </div>
+
+      <div id='name' class='name_9'>
+        <span>Ваня<br> Буката</span>
+      </div>
+      <div id='combody' class='combody_9'>
+        10Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+      </div>
+
+      <div id='name' class='name_10'>
+        <span>Алексей<br>Бенько</span>
+      </div>
+      <div id='combody' class='combody_10'>
+        "Чтоб хуй стоял и сердце жилось"
+      </div>
+    </div>
+<div class='wrapper'>
+</div>
+
+
+
+
+
+
+<script>
+keyframes_hero = []
+
+$( document ).ready(function() {
+  var minScroll=500
+  var maxScroll=2000;
+  var maxScale=1;
+  var minScale=0.5
+
+  var x=($(window).scrollTop() - minScroll)/(maxScroll-minScroll)*(maxScale-minScale) + minScale;
+
+  if ($(window).scrollTop()>maxScroll) x = maxScale;
+  if ($(window).scrollTop()<minScroll) x = minScale;
+
+
+  if ($(window).scrollTop()<minScroll) {
+    $('#head').show()
+  } else {
+    $('#head').hide()
+  }
+
+  $('#image').css({transform: 'scale('+x+','+x+')'});
+
+  steps_start = 3000
+  if($(window).scrollTop()>steps_start) {
+    steps = 800;
+    step = Math.floor(($(window).scrollTop() - steps_start)/steps) + 1
+    if(step===11) step = 10
+    if(step > 11) step = 11;
+
+    $('#image').attr('class','steps_start step_' + step);
+
+    for(var i = 0; i < 12; i++) {
+      if (step === i) {
+        $('.name_' + i).show()
+        $('.combody_' + i).show()
+      } else {
+        $('.name_' + i).hide()
+        $('.combody_' + i).hide()
+      }
+    }
+
+    if(step < 11) {
+      $('#comment').show()
+    } else {
+      $('#comment').hide()
+    }
+  } else {
+    $('#image').attr('class','before_steps');
+    $('#comment').hide()
+  }
+
+  $('body').addClass('no-overflow')
+  setTimeout(() => {
+    $('body').removeClass('no-overflow')
+    $('#overlay').fadeOut();
+  }, 3000);
+});
+
+$(window).scroll(function(){
+    var minScroll=500
+    var maxScroll=2000;
+    var maxScale=1;
+    var minScale=0.5
+
+    var x=($(window).scrollTop() - minScroll)/(maxScroll-minScroll)*(maxScale-minScale) + minScale;
+
+    if ($(window).scrollTop()>maxScroll) x = maxScale;
+    if ($(window).scrollTop()<minScroll) x = minScale;
+
+
+    if ($(window).scrollTop()<minScroll) {
+      $('#head').fadeIn()
+    } else {
+      $('#head').fadeOut()
+    }
+
+    $('#image').css({transform: 'scale('+x+','+x+')'});
+
+    steps_start = 3000
+    if($(window).scrollTop()>steps_start) {
+      steps = 800;
+      step = Math.floor(($(window).scrollTop() - steps_start)/steps) + 1
+      if(step===11) step = 10
+      if(step > 11) step = 11;
+
+      $('#image').attr('class','steps_start step_' + step);
+
+      for(var i = 0; i < 12; i++) {
+        if (step === i) {
+          $('.name_' + i).show()
+          $('.combody_' + i).show()
+        } else {
+          $('.name_' + i).hide()
+          $('.combody_' + i).hide()
+        }
+      }
+
+      if(step < 11) {
+        $('#comment').fadeIn()
+      } else {
+        $('#comment').fadeOut()
+      }
+    } else {
+      $('#image').attr('class','before_steps');
+      $('#comment').fadeOut()
+    }
+});
+</script>
+
+
+
+</body>
+
+
+</html>
