@@ -34,7 +34,7 @@ body {
 }
 
 
-#head-overlay {
+.head-overlay {
   font-weight: bold;
   color:white;
     font-size: 65px;
@@ -176,7 +176,7 @@ body {
   align-items: center;
 }
 
-#overlay {
+.overlay {
   position: fixed;
   background: black;
   width: 100%;
@@ -200,13 +200,43 @@ body {
   }
 }
 
+#overlay-2 {
+  background: rgba(0,0,0,0.8);
+  box-sizing: border-box;
+  padding: 0 200px;
+  line-height: 30px;
+}
+#overlay-2 .span {
+  line-height: 30px;
+}
+
+
 </style>
 
 </head>
 
 <body>
-    <div id='overlay'>
-      <span id='head-overlay'>Сегодня особенный день...</div>
+    <div id='overlay' class='overlay'>
+      <span class='head-overlay'>Сегодня особенный день...</span>
+    </div>
+    <div id='overlay-2' class='overlay'>
+      <span class='head-overlay' style='font-size:20px; line-height: 30px;'>
+        Артемий Шувалов:<br> Счастья, здоровья😃<br><br>
+        Вильямс Шанаров:<br>
+        В гордом имени Леонид<br>
+        Марш походный всегда звучит,<br>
+        И зовет он всех за собой,<br>
+        И вперед лишь он рвется, в бой!<br>
+        Леонид не боится бед,<br>
+        Он уверен в своей судьбе.<br>
+        Пожелать я хочу тебе<br>
+        Лишь победы в любой борьбе!<br>
+        🛡⚔️🏺<br><br>
+        Вагиз Дусеев:<br>
+        С днём рождения! Пусть невезуха, косяк и облом всегда стороною обходят твой дом!<br><br>
+        И от всех нас:<br>
+        С Днем Рождения! Спасибо что ты есть!
+      </span>
     </div>
     <img id='image' src='./image.jpg'>
     <div id='comment'>
@@ -337,6 +367,8 @@ $( document ).ready(function() {
     $('#head').hide()
   }
 
+  $('#overlay-2').hide()
+
   $('#image').css({transform: 'scale('+x+','+x+')'});
 
   steps_start = 3000
@@ -372,7 +404,7 @@ $( document ).ready(function() {
   setTimeout(() => {
     $('body').removeClass('no-overflow')
     $('#overlay').fadeOut();
-  }, 3000);
+  }, 100);
 });
 
 $(window).scroll(function(){
@@ -416,8 +448,10 @@ $(window).scroll(function(){
 
       if(step < 13) {
         $('#comment').fadeIn()
+        $('#overlay-2').fadeOut()
       } else {
         $('#comment').fadeOut()
+        $('#overlay-2').fadeIn()
       }
     } else {
       $('#image').attr('class','before_steps');
