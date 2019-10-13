@@ -33,6 +33,19 @@ body {
     left: 0;
 }
 
+
+#head-overlay {
+  font-weight: bold;
+  color:white;
+    font-size: 65px;
+    line-height: 82px;
+    text-align: center;
+    z-index: 5;
+    text-align: center;
+    width: 100%;
+    left: 0;
+}
+
 #image {
   position: fixed;
   top: 0;
@@ -40,7 +53,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transform: scale(1);
+  transform: scale(0.95);
 }
 
 .steps_start {
@@ -99,16 +112,30 @@ body {
   margin-top: 50px;
 }
 
+
 .step_10 {
-  transition: all 2s ease !important;
+  margin-left: -350px !important;
+  margin-top: 0px;
+}
+
+
+.step_11 {
+  transition: transform 0.5s ease, margin 1s ease !important;
+  transform: scale(6) !important;
+  margin-left: -130% !important;
+  margin-top: 0px;
+}
+
+.step_12 {
+  transition: scale 0.5s ease, margin 1s ease !important;
   transform: scale(6) !important;
   margin-left: -160% !important;
   margin-top: 50px;
 }
 
-.step_11 {
+.step_13 {
   transition: all 1s ease !important;
-  transform: scale(1) !important;
+  transform: scale(0.95) !important;
   margin: 0 !important;
 }
 
@@ -140,7 +167,7 @@ body {
   width: 70%;
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 160%;
   color: white;
   padding: 50px;
@@ -157,6 +184,9 @@ body {
   z-index: 10;
   top:0;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .no-overflow {
@@ -175,77 +205,106 @@ body {
 </head>
 
 <body>
-    <div id='overlay'></div>
-    <div id='head'>Сегодня особенный день...</div>
+    <div id='overlay'>
+      <span id='head-overlay'>Сегодня особенный день...</div>
+    </div>
     <img id='image' src='./image.jpg'>
     <div id='comment'>
       <div id='name' class='name_1'>
-        <span>2Ваня<br> Буката</span>
+        <span>Иван<br>Буката</span>
       </div>
       <div id='combody' class='combody_1'>
-        2Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+        Леонид, будь счастлив! Не черствей умом!<br>Как говорил Гор Видал, «Недостаточно достичь успеха. Нужно, чтобы остальные проиграли.»
       </div>
 
       <div id='name' class='name_2'>
-        <span>3Ваня<br> Буката</span>
+        <span>Михаил<br>Штефан</span>
       </div>
       <div id='combody' class='combody_2'>
-        3Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+        Чтобы обыгрывал сына в шахматы, даже когда тот станет гроссмейстером.
       </div>
 
       <div id='name' class='name_3'>
-        <span>4Ваня<br> Буката</span>
+        <span>Григорий<br>Сидоров</span>
       </div>
       <div id='combody' class='combody_3'>
-        4Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+        От всей души – счастья, исполнения желаний! Пусть жизнь, как яркая мозаика, складывается из светлых красок радости, незабываемых событий, а каждый новый день дарит удачу и прекрасное настроение!
       </div>
 
       <div id='name' class='name_4'>
-        <span>5Ваня<br> Буката</span>
+        <span>Искандер<br>Силапов</span>
       </div>
       <div id='combody' class='combody_4'>
-        5Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+        Лёня, спасибо за то, что объедений нас всех благодаря своему уму и таланту. Ты очень крутой и хороший. Желаю интересных и сложных задач, которые было бы приятно решать. С днем рождения!
       </div>
 
       <div id='name' class='name_5'>
-        <span>6Ваня<br> Буката</span>
+        <span>Виктор<br>Коханюков</span>
       </div>
       <div id='combody' class='combody_5'>
-        6Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+        Радуйся жизни, цени и привлекай все прекрасное в этом мире, и пусть все твои мечты станут реальностью! С днем рождения тебя!
       </div>
 
       <div id='name' class='name_6'>
-        <span>7Ваня<br> Буката</span>
+        <span>Олег<br>Писклов</span>
       </div>
       <div id='combody' class='combody_6'>
-        7Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+        C ДР! Желаю, чтобы Лев и Sailplay росли крепкими и здоровыми
       </div>
 
       <div id='name' class='name_7'>
-        <span>8Ваня<br> Буката</span>
+        <span>Ксюшка<br>Хрюшка</span>
       </div>
       <div id='combody' class='combody_7'>
-        8Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+          Пусть не тронут Вас печали,<br>
+          Процветание в жизни ждет.<br>
+          Сбудется, о чём мечтали,<br>
+          Пусть удача к Вам придет!<br>
+          Обнимаю! По спине хлопаю!
       </div>
 
       <div id='name' class='name_8'>
-        <span>9Ваня<br> Буката</span>
+        <span>Стас<br>Корепанов</span>
       </div>
       <div id='combody' class='combody_8'>
-        9Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+          Желаю больше успешного успеха и пусть хата крутиться, а лавэха мутиться. С праздником!
       </div>
 
       <div id='name' class='name_9'>
-        <span>Ваня<br> Буката</span>
+        <span>Андрей<br>Ушаков</span>
       </div>
       <div id='combody' class='combody_9'>
-        10Картины будут включены в пространство постоянной экспозиции в Лаврушинском переулке. В экспнтиком
+        Я тебя еще не знаю<br>
+       Но душевно поздравляю<br>
+       Вилл сказал, что ты красавчик,<br>
+       Но возможно он про сына...
       </div>
 
       <div id='name' class='name_10'>
-        <span>Алексей<br>Бенько</span>
+        <span>Евгений<br>Семикашев</span>
       </div>
       <div id='combody' class='combody_10'>
+        Счастья, здоровья, детей богатых
+      </div>
+
+      <div id='name' class='name_11'>
+        <span>Павел<br>Мысин</span>
+      </div>
+      <div id='combody' class='combody_11' style="font-size:25px">
+        Здоровья, силы, как у богатыря.<br>
+        Успехов царских и немецкого коня!<br>
+        Проблемам шах и мат в 2 хода,<br>
+        Бардовских хитов на альбомы года!<br>
+
+        Чтобы «вот это вот все» только вырастало<br>
+        И футбольная карьера не угасала!
+
+      </div>
+
+      <div id='name' class='name_12'>
+        <span>Алексей<br>Бенько</span>
+      </div>
+      <div id='combody' class='combody_12'>
         "Чтоб хуй стоял и сердце жилось"
       </div>
     </div>
@@ -263,7 +322,7 @@ keyframes_hero = []
 $( document ).ready(function() {
   var minScroll=500
   var maxScroll=2000;
-  var maxScale=1;
+  var maxScale=0.95;
   var minScale=0.5
 
   var x=($(window).scrollTop() - minScroll)/(maxScroll-minScroll)*(maxScale-minScale) + minScale;
@@ -284,12 +343,12 @@ $( document ).ready(function() {
   if($(window).scrollTop()>steps_start) {
     steps = 800;
     step = Math.floor(($(window).scrollTop() - steps_start)/steps) + 1
-    if(step===11) step = 10
-    if(step > 11) step = 11;
+    if(step===13) step = 12
+    if(step > 13) step = 13;
 
     $('#image').attr('class','steps_start step_' + step);
 
-    for(var i = 0; i < 12; i++) {
+    for(var i = 0; i < 20; i++) {
       if (step === i) {
         $('.name_' + i).show()
         $('.combody_' + i).show()
@@ -299,7 +358,7 @@ $( document ).ready(function() {
       }
     }
 
-    if(step < 11) {
+    if(step < 13) {
       $('#comment').show()
     } else {
       $('#comment').hide()
@@ -319,7 +378,7 @@ $( document ).ready(function() {
 $(window).scroll(function(){
     var minScroll=500
     var maxScroll=2000;
-    var maxScale=1;
+    var maxScale=0.95;
     var minScale=0.5
 
     var x=($(window).scrollTop() - minScroll)/(maxScroll-minScroll)*(maxScale-minScale) + minScale;
@@ -340,12 +399,12 @@ $(window).scroll(function(){
     if($(window).scrollTop()>steps_start) {
       steps = 800;
       step = Math.floor(($(window).scrollTop() - steps_start)/steps) + 1
-      if(step===11) step = 10
-      if(step > 11) step = 11;
+      if(step===13) step = 12
+      if(step > 13) step = 13;
 
       $('#image').attr('class','steps_start step_' + step);
 
-      for(var i = 0; i < 12; i++) {
+      for(var i = 0; i < 20; i++) {
         if (step === i) {
           $('.name_' + i).show()
           $('.combody_' + i).show()
@@ -355,7 +414,7 @@ $(window).scroll(function(){
         }
       }
 
-      if(step < 11) {
+      if(step < 13) {
         $('#comment').fadeIn()
       } else {
         $('#comment').fadeOut()
